@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of aws_tools.
 
+## 0.1.1:
+* Fix `source` must be an absolute URI or an array of URIs.
+
 ## 0.1.0:
 
 * Initial release of aws_tools
