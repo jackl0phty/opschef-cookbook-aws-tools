@@ -8,6 +8,6 @@
 
 # Install EC2 AMI tools.
 remote_file "#{Chef::Config[:file_cache_path]}/ec2-ami-tools.zip" do
-  source "#{node['aws_tools']['ec2_ami_tools_url']}"
+  source "#{node.default['aws_tools']['ec2_ami_tools_url']}"
   not_if "test -f #{Chef::Config[:file_cache_path]}/ec2-ami-tools.zip"
 end
