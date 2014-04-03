@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of aws_tools.
 
+## 0.1.5:
+* Fix typo in .kitchen.yml.
+
 ## 0.1.4:
 * Add test-kitchen integration.
 * Fix `source` must be an absolute URI or an array of URIs.

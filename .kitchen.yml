@@ -12,6 +12,6 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[aws_tools::ec2_ami_tools],
+      - recipe[aws_tools::ec2_ami_tools]
       - recipe[aws_tools::ec2_api_tools]
     attributes:
