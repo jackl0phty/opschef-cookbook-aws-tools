@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of aws_tools.
 
+## 0.1.7
+* Fix source for remote_file resource
+
 ## 0.1.5:
 * Fix typo in .kitchen.yml.
 
