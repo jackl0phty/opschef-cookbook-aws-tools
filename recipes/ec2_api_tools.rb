@@ -8,6 +8,6 @@
 
 # Install EC2 API tools.
 remote_file "#{Chef::Config[:file_cache_path]}/ec2-api-tools.zip" do
-  source node['aws_tools']['ec2_api_tools_url']
+  source 'http://s3.amazonaws.com/ec2-downloads/ec2-api-tools.zip'
   not_if "#{Chef::Config[:file_cache_path]}/ec2-api-tools.zip"
 end

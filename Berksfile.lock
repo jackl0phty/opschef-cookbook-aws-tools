@@ -1,9 +1,9 @@
 {
   "sources": {
     "aws_tools": {
-      "locked_version": "0.1.7",
+      "locked_version": "0.1.8",
       "git": "git@github.com:jackl0phty/opschef-cookbook-aws-tools.git",
-      "ref": "edaced71208686200c0faa81a6ddfbee2ac6d761"
+      "ref": "c62327a530dd855c3a05c99bff9b8e92a822b708"
     }
   }
 }
