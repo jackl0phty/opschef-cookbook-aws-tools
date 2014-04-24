@@ -16,8 +16,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Install URL for EC2 API tools.
-node.default['aws_tools']['ec2_api_tools_url'] = 'http://s3.amazonaws.com/ec2-downloads/ec2-api-tools.zip'
+# Source dir.
+node.default['aws_tools']['source_dir'] = '/usr/src'
 
-# Install URL for EC2 AMI tools.
-node.default['aws_tools']['ec2_ami_tools_url'] = 'http://s3.amazonaws.com/ec2-downloads/ec2-ami-tools.zip'
+# Ami tools install dir.
+node.default['aws_tools']['ec2_ami_install_dir'] = '/usr/local'
+
+# Api install dir.
+node.default['aws_tools']['ec2_api_install_dir'] = '/usr/local'
