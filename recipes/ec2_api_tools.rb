@@ -26,4 +26,5 @@ bash "Copy ec2-api-tools binaries to /usr/local/bin..." do
   EC2_API_VERSION=`ls -a /var/chef/cache/ |grep ec2-api-tools |egrep -v ec2-api-tools.zip |perl -p -i -e 's/ec2-api-tools-//gmx'`
   cp /var/chef/cache/ec2-api-tools-$EC2_API_VERSION/bin/* /usr/local/bin
   EOH
+  not_if 'ls /usr/local/bin |grep ec2-get-password'
 end
