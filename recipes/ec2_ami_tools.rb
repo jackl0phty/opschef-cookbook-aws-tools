@@ -14,8 +14,8 @@ end
 
 # Unzip ec2-ami-tools.zip to /usr/src.
 execute "Unzipping ec2-ami-tools.zip..." do
-  command "unzip #{Chef::Config[:file_cache_path]}/ec2-ami-tools.zip -d #{node.default['ec2_ami_install_dir']}"
-  not_if "ls -al #{node.default['ec2_ami_install_dir']} |grep ec2-ami-tools-"
+  command "unzip #{Chef::Config[:file_cache_path]}/ec2-ami-tools.zip -d #{node.default['aws_tools']['src_dir']}"
+  not_if "ls -al #{node.default['aws_tools']['src_dir']} |grep ec2-ami-tools-"
 end
 
 # Export environment variable for ec2 ami tools.
