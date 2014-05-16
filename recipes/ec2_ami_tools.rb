@@ -23,8 +23,8 @@ bash "Copy ec2-ami-tools binaries to /usr/local/bin..." do
   user "root"
   cwd "/tmp"
   code <<-EOH
-  export EC2_AMI_VERSION=`ls -a /var/chef/cache/ |grep ec2-ami-tools |egrep -v ec2-ami-tools.zip |perl -p -i -e 's/ec2-ami-tools-//gmx'`
-  cp /var/chef/cache/ec2-ami-tools-$EC2_AMI_VERSION/bin/* /usr/local/bin
+  export EC2_AMI_VERSION=`ls -a /usr/src/ |grep ec2-ami-tools |egrep -v ec2-ami-tools.zip |perl -p -i -e 's/ec2-ami-tools-//gmx'`
+  cp /usr/src/ec2-ami-tools-$EC2_AMI_VERSION/bin/* /usr/local/bin
   EOH
   not_if 'ls /usr/local/bin |grep ec2-ami-tools-version'
 end
