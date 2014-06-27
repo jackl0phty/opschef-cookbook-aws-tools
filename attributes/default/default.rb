@@ -16,9 +16,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Source dir.
-node.default['aws_tools']['source_dir'] = '/usr/src'
-
 # Ami tools install dir.
 node.default['aws_tools']['ec2_ami_install_dir'] = '/usr/local'
 
