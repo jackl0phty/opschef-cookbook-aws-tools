@@ -24,8 +24,8 @@ bash "Copy ec2-api-tools binaries to /usr/local/bin..." do
   user "root"
   cwd "/tmp"
   code <<-EOH
-  export EC2_API_VERSION=`ls -a /usr/src/ |grep ec2-api-tools |egrep -v ec2-api-tools.zip |perl -p -i -e 's/ec2-api-tools-//gmx'`
-  cp /var/chef/cache/ec2-api-tools-$EC2_API_VERSION/bin/* /usr/local/bin
+  export EC2_API_VERSION=`ls -a /usr/src/ |grep ec2-api-tools |perl -p -i -e 's/ec2-api-tools-//gmx'`
+  cp /usr/src/ec2-api-tools-$EC2_API_VERSION/bin/* /usr/local/bin
   EOH
   not_if 'ls /usr/local/bin |grep ec2-get-password'
   not_if 'test -d /tmp/kitchen/cookbooks'
